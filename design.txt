@@ -1,0 +1,299 @@
+PROBLEM STATEMENT:
+What is the cost of your desired home? We want to give the user estimate of the house cost. First start with asking how many homes they want to build with a loop.
+We will get this estimate by calculating the cost from the prompting the user to enter their desired square feet, 
+number of rooms, number of bathrooms, number of windows, if they want a garage, if yes the square foot of the garage and if they want a basement.
+You should display the output of all variables and the total cost of the home based on those factors.
+
+Nouns: 
+loop, 
+user input such as:
+number of houses
+square footage
+number of bedrooms
+number of bathrooms
+number of windows
+garage
+basement
+
+Verbs:
+prompt
+calculate
+output
+
+</pre>
+        <h3>2. Defining Diagram</h3>
+        <ul>
+          <li>Convert the nouns and verbs into variable names and processes and create a defining diagram.</li>
+          <li>Make your variable names <strong>valid JavaScript names</strong> that conform to the course JavaScript Coding Standards.</li>
+          <li>Write down the processes with very short statements, 2 or 3 words. Remember, this is not pseudocode. This is just the process.</li>
+        </ul>
+
+<pre class="pseudocode">
+INPUTS: ' 
+number of houses desired to build
+square feet of house
+number of bedrooms
+number of bathrooms
+number of windows
+if they want a garage
+garage square footage
+if they want a basement
+
+PROCESSING:
+prompt for the input
+calculate cost of the home
+display the output
+
+OUTPUTS:
+house number
+house square footage
+number of bedrooms
+number of bathrooms
+number of windows
+include garage and garage square footage if they want one
+include basement if they want it 
+
+
+</pre>
+
+        <h3>3. Solution Algorithm</h3>
+        <ul>
+          <li>Create a solution algorithm (using Pseudocode) based on the defining diagram. Remember to give your algorithm a name and use proper indentation.</li>
+          <li>Ensure you include an appropriate level of detail for your input, processing, and output logic.</li>
+        </ul>
+
+
+<pre class="pseudocode">SOLUTION ALGORITHM GOES HERE:
+EstimatingCostofHouseBuild
+  prompt for user to enter number of houses they want to build, desired square footage, 
+  number of bedrooms, bathrooms, and windows the house should have. 
+  If they want a garage or not. If yes include garage and square footage of garage.
+  If they want a basement include the basement.
+  convert inputs to numbers
+  calculate cost of the home or homes
+  output the number of the home, all inputs and cost to build the home.
+END
+
+</pre>
+
+        <h3>4. Checking the Solution Algorithm</h3>
+        <ul>
+          <li>Create a test plan for the algorithm.
+            <ul>
+              <li>Don't forget to fill in the <strong>VARIABLES</strong> section! That's easy to miss!</li>
+            </ul>
+          </li>
+          <li>Have <b>at least 3 test cases</b> that test different inputs and outputs. </li>
+        </ul>
+
+<pre class="pseudocode">
+VARIABLES: number of homes, square footage of home, number of bedrooms, number of bathrooms, number of windows, if they want a basement: Y or N, if they want a garage: Y or N, the garage square footage
+
+TEST CASE 1: 
+
+  INPUT VALUES: 
+  1
+  3000
+  6
+  3
+  8
+  y
+  y
+  1000
+
+  EXPECTED RESULT: 
+    For house #1:
+    Square footage: 3000
+    6 bedrooms
+    3 bathrooms
+    8 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 1000 square feet
+    Cost: $1719100
+  
+  ACTUAL RESULT:
+    For house #1:
+    Square footage: 3000
+    6 bedrooms
+    3 bathrooms
+    8 windows
+    Basement: yes 
+    Garage: yes Garage size: 
+    1000 square feet
+    Cost: $1719100
+
+TEST CASE 2: 
+
+  INPUT VALUES: 
+    2
+    6000
+    6
+    4
+    8
+    n
+    n
+    4000
+    3
+    2
+    4
+    y
+    n
+  
+  EXPECTED RESULT: 
+    For house #1:
+    Square footage: 6000
+    6 bedrooms
+    4 bathrooms
+    8 windows
+    Cost: $3421600
+
+    For house #2:
+    Square footage: 4000
+    3 bedrooms
+    2 bathrooms
+    4 windows
+    Basement: yes
+    Cost: $2276300
+
+  ACTUAL RESULT:
+    For house #1:
+    Square footage: 6000
+    6 bedrooms
+    4 bathrooms
+    8 windows
+    Cost: $3421600
+
+    For house #2:
+    Square footage: 4000
+    3 bedrooms
+    2 bathrooms
+    4 windows
+    Basement: yes 
+    Cost: $2276300
+    
+TEST CASE 3:
+
+  INPUT VALUES: 
+  1
+  6000
+  3
+  1
+  4
+  y
+  n
+
+  EXPECTED RESULT: 
+    For house #1:
+    Square footage: 6000
+    3 bedrooms
+    1 bathrooms
+    4 windows
+    Basement: yes 
+    Cost: $3401300
+  
+  ACTUAL RESULT:
+    For house #1:
+    Square footage: 6000
+    3 bedrooms
+    1 bathrooms
+    4 windows
+    Basement: yes 
+    Cost: $3401300   
+    
+TEST CASE 4:
+
+  INPUT VALUES: 
+    1
+    4000
+    4
+    2
+    3
+    y
+    y
+    2000
+
+  EXPECTED RESULT:
+    For house #1:
+    Square footage: 4000
+    4 bedrooms
+    2 bathrooms
+    3 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 2000 square feet
+    Cost: $2275725
+
+  ACTUAL RESULT:
+    For house #1:
+    Square footage: 4000
+    4 bedrooms
+    2 bathrooms
+    3 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 2000 square feet
+    Cost: $2275725
+ 
+TEST CASE 5:
+
+  INPUT VALUES: 
+    2
+    6000
+    4
+    3
+    8
+    y
+    y
+    2000
+    10000
+    8
+    4
+    10
+    y
+    y
+    3000
+
+  EXPECTED RESULT: The letter E is 69.
+    For house #1:
+    Square footage: 6000
+    4 bedrooms
+    3 bathrooms
+    8 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 2000 square feet
+    Cost: $3415600
+
+    For house #2:
+    Square footage: 10000
+    8 bedrooms
+    4 bathrooms
+    10 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 3000 square feet
+    Cost: $5684750
+    
+  ACTUAL RESULT:
+    For house #1:
+    Square footage: 6000
+    4 bedrooms
+    3 bathrooms
+    8 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 2000 square feet
+    Cost: $3415600
+
+    For house #2:
+    Square footage: 10000
+    8 bedrooms
+    4 bathrooms
+    10 windows
+    Basement: yes 
+    Garage: yes 
+    Garage size: 3000 square feet
+    Cost: $5684750
+    
+ 
